@@ -1,0 +1,1739 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mythri Raj Banda - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.176.0/dist/umd/lucide.min.css">
+  <style>
+    :root {
+      --purple: #9b87f5;
+      --purple-dark: #7E69AB;
+      --background: #ffffff;
+      --foreground: #0f172a;
+      --muted-foreground: #64748b;
+      --dark-blue: #1e293b;
+      --soft-gray: #f8f9fa;
+    }
+
+    .dark {
+      --background: #0f172a;
+      --foreground: #f8fafc;
+      --muted-foreground: #94a3b8;
+      --soft-gray: rgba(30, 41, 59, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      transition: background-color 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    section {
+      padding: 4rem 0 6rem;
+    }
+
+    .container-custom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    header.scrolled {
+      background-color: var(--background);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--foreground);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--purple);
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .desktop-nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .desktop-nav a {
+      color: var(--foreground);
+      opacity: 0.8;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .desktop-nav a:hover {
+      color: var(--purple);
+    }
+
+    .mobile-toggle {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 0.375rem;
+      color: var(--foreground);
+    }
+
+    .theme-toggle:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .theme-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 0.375rem;
+      color: var(--foreground);
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 1rem 0 1.5rem;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .mobile-menu.show {
+      display: block;
+    }
+
+    .mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .mobile-menu a {
+      color: var(--foreground);
+      opacity: 0.8;
+      text-decoration: none;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--purple);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--purple);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--purple-dark);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: transparent;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--purple);
+      color: white;
+    }
+
+    /* Hero Section */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 4rem;
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease;
+    }
+
+    .animate-bounce {
+      animation: bounce 2s infinite;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--purple);
+      transition: color 0.3s;
+      display: none;
+    }
+
+    .scroll-down:hover {
+      color: var(--purple-dark);
+    }
+
+    /* About Section */
+    #about {
+      background-color: var(--soft-gray);
+    }
+
+    .about-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .stat-card {
+      background-color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .dark .stat-card {
+      background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    .stat-card p:first-child {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--purple);
+    }
+
+    .stat-card p:last-child {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .skill-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .skill-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-info-name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-bar {
+      height: 0.5rem;
+      background-color: #e5e7eb;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .dark .skill-bar {
+      background-color: #374151;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background-color: var(--purple);
+      border-radius: 9999px;
+    }
+
+    .skills-categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .skill-category {
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .skill-category {
+      background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    .skill-category h4 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-category p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Projects Section */
+    #projects {
+      background-color: var(--soft-gray);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+    }
+
+    .dark .project-card {
+      background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    .project-card:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+      height: 12rem;
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .project-image img:hover {
+      transform: scale(1.1);
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-description {
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      background-color: rgba(155, 135, 245, 0.1);
+      color: var(--purple);
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0.5rem;
+    }
+
+    .project-link {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--foreground);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .project-link:hover {
+      color: var(--purple);
+    }
+
+    /* Resume Section */
+    .resume-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .resume-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .education-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid var(--purple);
+      margin-bottom: 1.5rem;
+    }
+
+    .dark .education-card {
+      background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .education-degree {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+
+    .education-period {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .education-school {
+      color: var(--muted-foreground);
+    }
+
+    .education-field {
+      font-size: 0.875rem;
+    }
+
+    .education-gpa {
+      font-size: 0.875rem;
+      color: var(--purple);
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    .certifications-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    .dark .certifications-card {
+      background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    .certifications-list {
+      list-style: none;
+    }
+
+    .certifications-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .cert-bullet {
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: var(--purple);
+      border-radius: 50%;
+      margin-top: 0.5rem;
+    }
+
+    .languages-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .languages-card {
+      background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .language-name {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .language-level {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .language-dot {
+      width: 1.25rem;
+      height: 0.5rem;
+      background-color: var(--purple);
+      border-radius: 9999px;
+    }
+
+    /* Contact Section */
+    #contact {
+      background-color: var(--soft-gray);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      width: 3rem;
+      height: 3rem;
+      background-color: rgba(155, 135, 245, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--purple);
+    }
+
+    .contact-details p:first-child {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    .contact-details a {
+      font-weight: 500;
+      color: var(--foreground);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-details a:hover {
+      color: var(--purple);
+    }
+
+    .social-links {
+      padding-top: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .social-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--foreground);
+      text-decoration: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+    }
+
+    .dark .social-icon {
+      background-color: rgba(30, 41, 59, 1);
+    }
+
+    .social-icon:hover {
+      background-color: var(--purple);
+      color: white;
+    }
+
+    .contact-form {
+      background-color: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .contact-form {
+      background-color: rgba(30, 41, 59, 0.5);
+    }
+
+    .form-success {
+      background-color: rgba(22, 163, 74, 0.1);
+      color: #16a34a;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .dark .form-success {
+      background-color: rgba(22, 163, 74, 0.2);
+      color: #4ade80;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      background-color: white;
+      transition: all 0.3s;
+    }
+
+    .dark .form-input {
+      border-color: #4b5563;
+      background-color: rgba(30, 41, 59, 1);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--purple);
+      box-shadow: 0 0 0 2px rgba(155, 135, 245, 0.2);
+    }
+
+    .form-textarea {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      background-color: white;
+      min-height: 8rem;
+      resize: vertical;
+      transition: all 0.3s;
+    }
+
+    .dark .form-textarea {
+      border-color: #4b5563;
+      background-color: rgba(30, 41, 59, 1);
+    }
+
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--purple);
+      box-shadow: 0 0 0 2px rgba(155, 135, 245, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark-blue);
+      color: white;
+      padding: 2.5rem 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .footer-logo span {
+      color: var(--purple);
+    }
+
+    .footer-tagline {
+      color: #94a3b8;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+      color: white;
+    }
+
+    .scroll-top {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .scroll-top:hover {
+      background-color: var(--purple-dark);
+    }
+
+    .footer-copyright {
+      text-align: center;
+      color: #94a3b8;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #334155;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      50% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+
+    /* Media Queries */
+    @media (min-width: 768px) {
+      section {
+        padding: 6rem 0;
+      }
+
+      .desktop-nav {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .resume-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .skills-categories {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .scroll-down {
+        display: block;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .section-heading {
+        text-align: center;
+      }
+    }
+
+    .section-heading {
+      font-size: 1.875rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .section-heading-line {
+      height: 0.25rem;
+      width: 2.5rem;
+      background-color: var(--purple);
+      border-radius: 9999px;
+      margin-left: 0.5rem;
+    }
+
+    .about-text {
+      max-width: 48rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-paragraph {
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container-custom">
+      <nav class="header-content">
+        <a href="#home" class="logo">Mythri<span>.dev</span></a>
+        
+        <div class="desktop-nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="mobile-toggle">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon hidden"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+          </button>
+          
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon hidden"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+          </button>
+        </div>
+      </nav>
+      
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="container-custom">
+        <div class="hero-text animate-fade-in">
+          <p style="color: var(--purple); font-weight: 500;">Hello, I'm</p>
+          <h1 style="font-size: 2.5rem; font-weight: 700;">Mythri Raj Banda</h1>
+          <h2 style="font-size: 1.5rem; color: var(--muted-foreground); font-weight: 500;">AI & Data Science Student</h2>
+          <p style="color: var(--muted-foreground); max-width: 32rem;">
+            Second year B.Tech student passionate about problem-solving and eager to expand knowledge in AI, machine learning, web development, and data science.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              Contact Me
+            </a>
+          </div>
+        </div>
+        
+        <a href="#about" class="scroll-down animate-bounce" aria-label="Scroll down">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container-custom">
+        <div class="about-text">
+          <h2 class="section-heading">
+            About Me
+            <div class="section-heading-line"></div>
+          </h2>
+          
+          <div class="about-paragraph">
+            <p class="about-paragraph">
+              I am a second year student of B.Tech Engineering in Artificial Intelligence and Data Science at Stanley College of Engineering and Technology for Women. I'm passionate about problem-solving and eager to expand my knowledge in AI, machine learning, web development, and data science.
+            </p>
+            <p class="about-paragraph">
+              As a quick learner with strong communication, teamwork, and problem-solving abilities, I'm constantly looking for new challenges and opportunities to grow in the field of technology.
+            </p>
+            <p class="about-paragraph">
+              Currently based in Hyderabad, Telangana, India, I'm focused on developing my skills and building innovative projects that showcase my abilities in software development and data science.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <p>6+</p>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+              <p>10+</p>
+              <p>Certifications</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container-custom">
+        <h2 class="section-heading">
+          My Skills
+          <div class="section-heading-line"></div>
+        </h2>
+
+        <div class="skills-grid">
+          <!-- Technical Skills -->
+          <div class="skill-group">
+            <div class="skill-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <h3 style="font-size: 1.25rem; font-weight: 600;">Technical Skills</h3>
+            </div>
+            
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-info-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 15v-2"></path><path d="M12 15v-6"></path><path d="M15 15v-4"></path></svg>
+                    <span>Python</span>
+                  </div>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-info-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 15v-2"></path><path d="M12 15v-6"></path><path d="M15 15v-4"></path></svg>
+                    <span>Java</span>
+                  </div>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-info-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+                    <span>HTML</span>
+                  </div>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-info-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+                    <span>CSS</span>
+                  </div>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-info-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <span>JavaScript</span>
+                  </div>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-info-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <span>C Programming</span>
+                  </div>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-group">
+            <div class="skill-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+              <h3 style="font-size: 1.25rem; font-weight: 600;">Tools</h3>
+            </div>
+            
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>VS Code</span>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>IDLE</span>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Jupyter Notebook</span>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>RStudio</span>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Power BI</span>
+                  <span style="font-size: 0.875rem; color: var(--muted-foreground);">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-categories">
+          <div class="skill-category">
+            <h4>Languages</h4>
+            <p>English, Telugu</p>
+          </div>
+          <div class="skill-category">
+            <h4>Data Science</h4>
+            <p>Machine Learning, Data Analysis</p>
+          </div>
+          <div class="skill-category">
+            <h4>Web Development</h4>
+            <p>Frontend, UI/UX</p>
+          </div>
+          <div class="skill-category">
+            <h4>Tools</h4>
+            <p>VS Code, Jupyter, RStudio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container-custom">
+        <h2 class="section-heading">
+          My Projects
+          <div class="section-heading-line"></div>
+        </h2>
+        
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop" alt="Student Dropout Risk Predictor" />
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">Hits, Hype, and Heatmaps: Exploring Spotify's Streaming Story</h3>
+              <p class="project-description">A data visualization and analysis project using Spotify streaming data to identify the most popular artists and trends over time, with insights generated through statistical plots, histograms, pie charts, heatmaps, and box plots.</p>
+              
+              <div class="project-tags">
+                <span class="project-tag">R</span>
+                <span class="project-tag">dplyr</span>
+                <span class="project-tag">ggplot2</span>
+                <span class="project-tag">readr</span>
+                <span class="project-tag">CSV</span>
+                <span class="project-tag">Data Visualization</span>
+              </div>
+              
+              
+              <div class="project-links">
+                <a href="public/Spotify Streaming Data Analysis.pdf" class="project-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                  Code
+                </a>
+                <a href="https://rpubs.com/Mythri_banda/1300332" class="project-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+                  
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070&auto=format&fit=crop" alt="Personal Portfolio Website" />
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-description">A fully responsive personal portfolio website built using only HTML and CSS, designed to showcase projects, skills, and contact information. The layout adapts seamlessly to different screen sizes, providing an optimal experience on both desktop and mobile devices. The site features a modern, minimalist UI with smooth hover effects, structured sections, and intuitive navigation.</p>
+              
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">Responsive Design</span>
+                <span class="project-tag">Flexbox</span>
+                <span class="project-tag">CSS Grid</span>
+                <span class="project-tag">Media Queries</span>
+                <span class="project-tag">Google Fonts</span>
+                <span class="project-tag">Lucide Icons</span>
+                <span class="project-tag">VS Code</span>
+              </div>
+              
+              
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                  Code
+                </a>
+                <a href="#" class="project-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+      <div class="container-custom">
+        <div class="resume-header">
+          <h2 class="section-heading" style="margin-bottom: 0;">
+            Resume
+            <div class="section-heading-line"></div>
+          </h2>
+          
+          <!-- Button -->
+<button class="btn-primary" id="download-resume">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+    <polyline points="7 10 12 15 17 10"></polyline>
+    <line x1="12" x2="12" y1="15" y2="3"></line>
+  </svg>
+  Download Resume
+</button>
+
+<!-- Script -->
+<script>
+  document.getElementById("download-resume")?.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = "public/Mythri Resume.pdf"; // Replace with your actual file path
+    link.download = "Mythri Resume.pdf"; // This will be the filename when saved
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
+
+        </div>
+        
+        <div class="resume-grid">
+          <!-- Education Section -->
+          <div>
+            <div class="resume-section-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <h3 style="font-size: 1.25rem; font-weight: 600;">Education</h3>
+            </div>
+            
+            <div class="education-list">
+              <div class="education-card">
+                <div class="education-header">
+                  <h4 class="education-degree">Bachelor of Engineering</h4>
+                  <span class="education-period">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                    2023 - 2027
+                  </span>
+                </div>
+                <p class="education-school">STANLEY COLLEGE OF ENGINEERING AND TECHNOLOGY FOR WOMEN</p>
+                <p class="education-field">Artificial Intelligence and Data Science</p>
+                <p class="education-gpa">CGPA: 7.49</p>
+              </div>
+              
+              <div class="education-card">
+                <div class="education-header">
+                  <h4 class="education-degree">Intermediate</h4>
+                  <span class="education-period">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                    2021 - 2023
+                  </span>
+                </div>
+                <p class="education-school">Narayana Junior College, Tarnaka</p>
+                <p class="education-field">MPC (Math, Physics, Chemistry)</p>
+                <p class="education-gpa">CGPA: 7.3</p>
+              </div>
+              
+              <div class="education-card">
+                <div class="education-header">
+                  <h4 class="education-degree">School</h4>
+                  <span class="education-period">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                    2009 - 2021
+                  </span>
+                </div>
+                <p class="education-school">St Ann's Grammar School</p>
+                <p class="education-field">SSC</p>
+                <p class="education-gpa">CGPA: 9.5</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certifications Section -->
+          <div>
+            <div class="resume-section-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+              <h3 style="font-size: 1.25rem; font-weight: 600;">Certifications</h3>
+            </div>
+            
+            <div class="certifications-card">
+              <ul class="certifications-list">
+                <li>
+                  <div class="cert-bullet"></div>
+                  <span>COUSERA GOOGLE (Data Analytics, Cyber Security)</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div>
+                  <span>Career Essentials in (Data Analysis, Generative AI) by Microsoft and LinkedIn</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div>
+                  <span>HackerRank - Software Developer Intern</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="resume-section-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-5"></path><circle cx="17" cy="17" r="5"></circle></svg>
+              <h3 style="font-size: 1.25rem; font-weight: 600;">Languages</h3>
+            </div>
+            
+            <div class="languages-card">
+              <div class="languages-grid">
+                <div>
+                  <p class="language-name">English</p>
+                  <div class="language-level">
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    </div>
+                </div>
+                <div>
+                  <p class="language-name">Telugu</p>
+                  <div class="language-level">
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                    <div class="language-dot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container-custom">
+        <h2 class="section-heading">
+          Contact Me
+          <div class="section-heading-line"></div>
+        </h2>
+        
+        <div class="contact-grid">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div>
+              <h3 style="font-size: 1.5rem; font-weight: 600;">Get In Touch</h3>
+              <p style="color: var(--muted-foreground); margin-top: 1rem;">
+                Feel free to reach out to me for any questions, project inquiries, or just to say hello. I'll get back to you as soon as possible!
+              </p>
+            </div>
+            
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                </div>
+                <div class="contact-details">
+                  <p>Email</p>
+                  <a href="mailto:bandamythri@gmail.com">bandamythri@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-details">
+                  <p>Phone</p>
+                  <a href="tel:8897643678">+91 8897643678</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-details">
+                  <p>Location</p>
+                  <p style="font-weight: 500;">Hyderabad, Telangana, India</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <p style="color: var(--muted-foreground); margin-bottom: 0.75rem;">Find me on</p>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mythri-banda" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://github.com/mythribanda" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                </a>
+                <a href="https://leetcode.com/mythri_banda" class="social-icon" aria-label="LeetCode" target="_blank" rel="noopener noreferrer">
+                  <span style="font-weight: 700;">LC</span>
+                </a>
+                <a href="https://www.hackerrank.com/mythri_banda" class="social-icon" aria-label="HackerRank" target="_blank" rel="noopener noreferrer">
+                  <span style="font-weight: 700;">HR</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;">Send Message</h3>
+            
+            <div id="form-success" class="form-success" style="display: none;">
+              Thank you! Your message has been sent successfully.
+            </div>
+            
+            <form id="contact-form" class="form">
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" id="email" name="email" class="form-input" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-textarea" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container-custom">
+      <div class="footer-content">
+        <div>
+          <h2 class="footer-logo">
+            Mythri<span>.dev</span>
+          </h2>
+          <p class="footer-tagline">AI & Data Science Student</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/mythri-banda" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/mythribanda" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://leetcode.com/mythri_banda" target="_blank" rel="noopener noreferrer">LeetCode</a>
+        </div>
+        
+        <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
+        </button>
+      </div>
+      
+      <div class="footer-copyright">
+        <p>&copy; <span id="current-year"></span> Mythri Raj Banda. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.querySelector(".menu-icon");
+    const closeIcon = document.querySelector(".close-icon");
+    
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+      menuIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+    
+    // Close mobile menu when clicking a link
+    const mobileLinks = document.querySelectorAll("#mobile-menu a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("show");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      });
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute("href");
+        if (!targetId) return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+    
+    // Dark mode toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const moonIcon = document.querySelector(".moon");
+    const sunIcon = document.querySelector(".sun");
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+      document.documentElement.classList.add("dark");
+      moonIcon.classList.remove("hidden");
+      sunIcon.classList.add("hidden");
+    }
+    
+    themeToggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      moonIcon.classList.toggle("hidden");
+      sunIcon.classList.toggle("hidden");
+      
+      if (document.documentElement.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
+    
+    // Header background change on scroll
+    const header = document.getElementById("header");
+    
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+    
+    // Scroll to top button
+    const scrollTopButton = document.getElementById("scroll-top");
+    
+    scrollTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+    
+    // Form submission handling
+    const contactForm = document.getElementById("contact-form");
+    const formSuccess = document.getElementById("form-success");
+    
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+      };
+      
+      // In a real implementation, you would send this data to a server
+      console.log("Form submitted:", formData);
+      
+      // Show success message
+      formSuccess.style.display = "block";
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        formSuccess.style.display = "none";
+      }, 5000);
+    });
+    
+    // Resume download functionality
+    const downloadButton = document.getElementById("download-resume");
+    
+    downloadButton.addEventListener("click", () => {
+      // In a real implementation, this would initiate a download
+      alert("Resume download would start here");
+    });
+  </script>
+</body>
+</html>
