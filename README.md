@@ -84,8 +84,7 @@ A **responsive personal portfolio website** built entirely with **HTML** and **C
 
 ## 📌 Live Demo
 
-> ✅ Coming soon on GitHub Pages  
-> *(Add your live link here once deployed)*
+> https://mythribanda.github.io/Mythri-Portfolio/
 
 ---
 
