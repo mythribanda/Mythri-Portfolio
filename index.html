@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mythri Raj Banda - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Mythri Raj Banda — AI & Data Science Engineer</title>
+  <meta name="description"
+    content="Mythri Raj Banda — AI & Data Science Engineer, Full-Stack Developer and Data Analyst based in Hyderabad, India.">
+
+  <!-- theme -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && systemDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- ══════════════ HEADER / NAV ══════════════ -->
+  <!-- Navbar -->
   <header id="header">
     <div class="container-custom">
       <nav class="header-content">
@@ -22,40 +44,43 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="mobile-toggle">
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-            <!-- Moon icon (dark mode active) -->
-            <svg class="moon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="moon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
             </svg>
-            <!-- Sun icon (light mode active) -->
-            <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="4"></circle>
-              <line x1="12" y1="2"    x2="12" y2="4"></line>
-              <line x1="12" y1="20"   x2="12" y2="22"></line>
-              <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"></line>
+              <line x1="12" y1="2" x2="12" y2="4"></line>
+              <line x1="12" y1="20" x2="12" y2="22"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
               <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="2"  y1="12" x2="4"  y2="12"></line>
+              <line x1="2" y1="12" x2="4" y2="12"></line>
               <line x1="20" y1="12" x2="22" y2="12"></line>
               <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
             </svg>
           </button>
 
-          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="4" x2="20" y1="12" y2="12"></line>
-              <line x1="4" x2="20" y1="6"  y2="6"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
               <line x1="4" x2="20" y1="18" y2="18"></line>
             </svg>
-            <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" x2="6"  y1="6"  y2="18"></line>
-              <line x1="6"  x2="18" y1="6"  y2="18"></line>
+            <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" x2="6" y1="6" y2="18"></line>
+              <line x1="6" x2="18" y1="6" y2="18"></line>
             </svg>
           </button>
         </div>
@@ -68,6 +93,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -77,25 +103,25 @@
 
   <main>
 
-    <!-- ══════════════ HERO ══════════════════════ -->
+    <!-- Hero -->
     <section id="home">
-      <div class="container-custom">
-        <div class="hero-text animate-fade-in">
+      <div class="container-custom hero-grid">
+        <div class="hero-text reveal">
           <p class="hero-eyebrow">Hello, I'm</p>
-          <h1 style="font-size:clamp(2.2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em">
-            Mythri Raj Banda
-          </h1>
-          <h2 style="font-size:1rem;color:var(--fg-muted);font-weight:500;line-height:1.5">
-            Aspiring Software Engineer Intern &nbsp;·&nbsp; Full-Stack Developer &nbsp;·&nbsp; Data Analyst
+          <h1 class="hero-name">Mythri Raj Banda</h1>
+          <h2 class="hero-role">
+            <span class="hero-role-static">I build</span>
+            <span class="hero-role-rotator" id="role-rotator" aria-live="polite"></span>
           </h2>
           <p class="hero-desc">
-            Detail-oriented Frontend Developer and Python Programmer with hands-on experience in building
-            responsive web applications and performing data-driven analysis. Passionate about designing
-            user-friendly interfaces and developing scalable, efficient solutions.
+            AI &amp; Data Science engineer focused on turning models and messy data into software people
+            can actually use. Experience across computer vision, NLP, analytics dashboards and full-stack
+            web. I like shipping the whole thing: pipeline, interface and deployment.
           </p>
           <div class="hero-buttons">
             <a href="#contact" class="btn-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
@@ -103,59 +129,117 @@
             </a>
             <a href="#projects" class="btn-secondary">View Projects</a>
           </div>
+
+          <div class="hero-meta">
+            <span class="hero-meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Hyderabad, India
+            </span>
+            <span class="hero-meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              B.E. AI &amp; Data Science · 2027
+            </span>
+          </div>
         </div>
 
-        <a href="#about" class="scroll-down animate-bounce" aria-label="Scroll down">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 5v14"></path>
-            <path d="m19 12-7 7-7-7"></path>
-          </svg>
-        </a>
+        <!-- Photo -->
+        <div class="hero-photo reveal" id="hero-photo">
+          <div class="photo-frame">
+            <img src="public/mythri.jpg" alt="Mythri Raj Banda" class="photo-img" id="profile-photo"
+              onerror="this.classList.add('photo-missing'); document.getElementById('photo-fallback').style.display='flex';">
+            <div class="photo-fallback" id="photo-fallback">MB</div>
+          </div>
+          <span class="photo-badge">
+            <span class="photo-badge-dot"></span> Open to internships
+          </span>
+        </div>
       </div>
+
+      <a href="#about" class="scroll-down animate-bounce" aria-label="Scroll down">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14"></path>
+          <path d="m19 12-7 7-7-7"></path>
+        </svg>
+      </a>
     </section>
 
-    <!-- ══════════════ ABOUT ══════════════════════ -->
+    <!-- About -->
     <section id="about">
       <div class="container-custom">
-        <div class="about-text">
-          <h2 class="section-heading">About Me <div class="section-heading-line"></div></h2>
+        <div class="about-text reveal">
+          <h2 class="section-heading">About Me <div class="section-heading-line"></div>
+          </h2>
 
           <p class="about-paragraph">
-            I am a B.E student in Artificial Intelligence and Data Science at Stanley College of Engineering
-            and Technology for Women, Hyderabad. Proficient in HTML, CSS, JavaScript, and Python with strong
-            analytical skills in data visualization and business intelligence using Power BI.
+            I'm a B.E. student in Artificial Intelligence and Data Science (2027 graduate, CGPA 7.5) at Stanley
+            College of Engineering and Technology for Women, Hyderabad. I work end-to-end across software
+            engineering, machine learning, data analysis and full-stack development, with day-to-day fluency in
+            Python, Java, JavaScript and SQL.
           </p>
           <p class="about-paragraph">
-            Experienced in transforming raw datasets into meaningful insights through data cleaning, exploratory
-            analysis, and dashboard creation. Completed a Research Internship at CBIT, where I developed
-            PillTalk — an AI-powered prescription translator using Google Gemini and React.js.
+            I like owning the full arc of a problem: cleaning raw data, building the model or pipeline, designing
+            a usable interface, and deploying it. At CBIT I built PillTalk, an AI healthcare app combining NLP,
+            computer vision and Google Gemini, and shipped it to the cloud on Hugging Face Spaces. I'm comfortable
+            with REST API integration, ETL-style data pipelines, Power BI dashboards and agile workflows, and I recently
+            completed a Full Stack Developer internship at Alonzo AI.
           </p>
           <p class="about-paragraph">
-            Passionate about problem-solving with strong communication, teamwork, and leadership abilities.
-            Based in Hyderabad, Telangana, India, always seeking new challenges in AI, ML, web development,
-            and data science.
+            I hold Oracle Certified Data Science Professional, Oracle AI Foundations Associate, and IBM &amp; Cisco
+            AI Fundamentals certifications. I'm looking for internships and entry roles in Software Engineering,
+            AI/ML, Data Science and Data Analytics.
           </p>
 
-          <div class="about-stats">
-            <div class="stat-card"><p>11</p><p>Projects on GitHub</p></div>
-            <div class="stat-card"><p>3+</p><p>Certifications</p></div>
-            <div class="stat-card"><p>1</p><p>Research Internship</p></div>
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <p class="stat-num" data-target="14" data-suffix="+">0</p>
+              <p>Projects shipped</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-num" data-target="2" data-suffix="">0</p>
+              <p>Internships</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-num" data-target="3" data-suffix="+">0</p>
+              <p>Certifications</p>
+            </div>
+          </div>
+
+          <div class="soft-skills reveal">
+            <span class="soft-chip">Problem-Solving</span>
+            <span class="soft-chip">Analytical Thinking</span>
+            <span class="soft-chip">Team Collaboration</span>
+            <span class="soft-chip">Communication</span>
+            <span class="soft-chip">Adaptability</span>
+            <span class="soft-chip">Attention to Detail</span>
+            <span class="soft-chip">Leadership</span>
+            <span class="soft-chip">Time Management</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════ SKILLS ═════════════════════ -->
+    <!-- Skills -->
     <section id="skills">
       <div class="container-custom">
-        <h2 class="section-heading">My Skills <div class="section-heading-line"></div></h2>
+        <h2 class="section-heading reveal">My Skills <div class="section-heading-line"></div>
+        </h2>
 
         <div class="skills-grid">
 
-          <!-- Programming Languages -->
-          <div class="skill-group">
+          <div class="skill-group reveal">
             <div class="skill-header">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="color:var(--accent)">
                 <polyline points="16 18 22 12 16 6"></polyline>
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
@@ -164,126 +248,245 @@
             <div class="skill-list">
               <div class="skill-item">
                 <div class="skill-info"><span>Python</span><span>80%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>HTML5</span><span>90%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>CSS3</span><span>85%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>JavaScript</span><span>75%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>Java</span><span>70%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:70%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>C Programming</span><span>75%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75%"></div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Tools & Platforms -->
-          <div class="skill-group">
+          <div class="skill-group reveal">
             <div class="skill-header">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="color:var(--accent)">
                 <line x1="12" y1="20" x2="12" y2="10"></line>
                 <line x1="18" y1="20" x2="18" y2="4"></line>
-                <line x1="6"  y1="20" x2="6"  y2="16"></line>
+                <line x1="6" y1="20" x2="6" y2="16"></line>
               </svg>
               <h3>Tools &amp; Platforms</h3>
             </div>
             <div class="skill-list">
               <div class="skill-item">
                 <div class="skill-info"><span>VS Code</span><span>90%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>Git &amp; GitHub</span><span>80%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>Jupyter Notebook</span><span>80%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>RStudio</span><span>85%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>Power BI</span><span>80%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80%"></div>
+                </div>
               </div>
               <div class="skill-item">
                 <div class="skill-info"><span>MySQL</span><span>75%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75%"></div>
+                </div>
               </div>
             </div>
           </div>
 
-        </div><!-- /skills-grid -->
+        </div>
 
         <div class="skills-categories">
-          <div class="skill-category"><h4>Web Development</h4><p>HTML5, CSS3, JavaScript, Responsive Design</p></div>
-          <div class="skill-category"><h4>AI &amp; Data Science</h4><p>Machine Learning, Data Analysis, NLP, OCR</p></div>
-          <div class="skill-category"><h4>Data Visualization</h4><p>Power BI, ggplot2, RStudio, Jupyter</p></div>
-          <div class="skill-category"><h4>Soft Skills</h4><p>Problem-Solving, Leadership, Teamwork</p></div>
+          <div class="skill-category reveal">
+            <h4>AI &amp; Machine Learning</h4>
+            <p>ML, Deep Learning, NLP, Computer Vision, Generative AI, OCR, scikit-learn, OpenCV, Gemini API</p>
+          </div>
+          <div class="skill-category reveal">
+            <h4>Data Science &amp; Analytics</h4>
+            <p>Pandas, NumPy, Matplotlib, Seaborn, R, Power BI, EDA, Statistics, ETL Pipelines</p>
+          </div>
+          <div class="skill-category reveal">
+            <h4>Full-Stack &amp; Web</h4>
+            <p>React.js, HTML5, CSS3, JavaScript, REST APIs, Responsive Design (Flexbox, Grid)</p>
+          </div>
+          <div class="skill-category reveal">
+            <h4>Database</h4>
+            <p>MySQL — schema design, querying, joins, indexing, relational modeling</p>
+          </div>
+          <div class="skill-category reveal">
+            <h4>Cloud &amp; Deployment</h4>
+            <p>Hugging Face Spaces, Git, GitHub</p>
+          </div>
+          <div class="skill-category reveal">
+            <h4>Software Engineering</h4>
+            <p>OOP, DSA, System Design, Clean Code, Testing, Debugging, Agile</p>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ══════════════ EXPERIENCE ════════════════ -->
+    <!-- Experience -->
     <section id="experience">
       <div class="container-custom">
-        <h2 class="section-heading">Professional Experience <div class="section-heading-line"></div></h2>
+        <h2 class="section-heading reveal">Professional Experience <div class="section-heading-line"></div>
+        </h2>
 
-        <div class="experience-card">
+        <!-- Internship -->
+        <div class="experience-card reveal">
+          <div class="experience-header">
+            <h3 class="experience-title">Full Stack Developer Intern</h3>
+            <span class="experience-period">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+              May 2026 – June 2026
+            </span>
+          </div>
+          <p class="experience-company">Alonzo AI · Hyderabad, India</p>
+          <ul class="experience-list">
+            <li>
+              <div class="exp-bullet"></div><span>Contributed to the development of <strong>EduSim</strong>, an
+                AI-powered educational platform, by building and enhancing frontend and backend features.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Developed responsive user interfaces using <strong>React.js,
+                  TypeScript, HTML, and CSS</strong>.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Integrated frontend applications with backend services through
+                <strong>REST APIs</strong> for seamless data exchange.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Worked with <strong>PostgreSQL</strong> databases for data storage,
+                retrieval, and management.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Collaborated with developers and mentors in an agile environment to
+                deliver production-ready features.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Participated in debugging, testing, code reviews, and performance
+                optimization to improve application reliability.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Used <strong>Git and GitHub</strong> for version control,
+                collaboration, and project management.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Gained hands-on experience across the complete software development
+                lifecycle, from development to deployment.</span>
+            </li>
+          </ul>
+          <div class="experience-tags">
+            <span class="project-tag">React.js</span><span class="project-tag">TypeScript</span>
+            <span class="project-tag">JavaScript</span><span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span><span class="project-tag">REST APIs</span>
+            <span class="project-tag">PostgreSQL</span><span class="project-tag">Git</span>
+            <span class="project-tag">GitHub</span><span class="project-tag">Full-Stack Development</span>
+          </div>
+        </div>
+
+        <!-- Internship -->
+        <div class="experience-card reveal">
           <div class="experience-header">
             <h3 class="experience-title">Research Intern – Artificial Intelligence</h3>
             <span class="experience-period">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
                 <line x1="16" x2="16" y1="2" y2="6"></line>
-                <line x1="8"  x2="8"  y1="2" y2="6"></line>
-                <line x1="3"  x2="21" y1="10" y2="10"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
               </svg>
               June 2025 – August 2025
             </span>
           </div>
-          <p class="experience-company">CBIT (Chaitanya Bharathi Institute of Technology)</p>
+          <p class="experience-company">Chaitanya Bharathi Institute of Technology (CBIT)</p>
           <ul class="experience-list">
             <li>
-              <div class="exp-bullet"></div>
-              <span>Developed PillTalk, an AI-powered prescription translator that converts handwritten medical
-                prescriptions into simple English instructions with audio support using Google Gemini and
-                Text-to-Speech APIs.</span>
+              <div class="exp-bullet"></div><span>Designed and deployed PillTalk, a production-ready AI healthcare app
+                integrating Google Gemini (LLM), NLP, OCR and OpenCV to turn handwritten prescriptions into structured,
+                patient-friendly instructions with audio support.</span>
             </li>
             <li>
-              <div class="exp-bullet"></div>
-              <span>Built and deployed a React.js-based application on Hugging Face Spaces, handling end-to-end
-                development including AI integration, UI design, testing, and research documentation.</span>
+              <div class="exp-bullet"></div><span>Shipped a full-stack React.js application on Hugging Face Spaces,
+                managing the end-to-end SDLC: requirements, system design, API integration, testing, debugging and
+                documentation.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Engineered an ETL-style pipeline over 500+ prescription records,
+                improving data quality by ~40% through systematic OCR preprocessing and NLP structuring.</span>
+            </li>
+            <li>
+              <div class="exp-bullet"></div><span>Collaborated with a cross-functional research team through code
+                reviews and weekly progress reports, translating requirements into technical solutions.</span>
             </li>
           </ul>
+          <div class="experience-tags">
+            <span class="project-tag">Python</span><span class="project-tag">OpenCV</span>
+            <span class="project-tag">OCR / NLP</span><span class="project-tag">Google Gemini</span>
+            <span class="project-tag">React.js</span>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ══════════════ PROJECTS ═══════════════════ -->
+    <!-- Projects -->
     <section id="projects">
       <div class="container-custom">
-        <h2 class="section-heading">My Projects <div class="section-heading-line"></div></h2>
+        <h2 class="section-heading reveal">My Projects <div class="section-heading-line"></div>
+        </h2>
 
-        <!-- Filter Tabs -->
-        <div class="filter-tabs">
-          <button class="filter-tab active" data-filter="all">All (11)</button>
+        <div class="filter-tabs reveal">
+          <button class="filter-tab active" data-filter="all">All</button>
           <button class="filter-tab" data-filter="ai-ml">AI / ML</button>
           <button class="filter-tab" data-filter="web">Web Dev</button>
           <button class="filter-tab" data-filter="data">Data Science</button>
@@ -292,312 +495,625 @@
 
         <div class="projects-grid" id="projects-grid">
 
-          <!-- 1. PillTalk -->
-          <div class="project-card" data-category="ai-ml">
+          <!-- PillTalk -->
+          <div class="project-card reveal" data-category="ai-ml">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=800&auto=format&fit=crop" alt="PillTalk">
+              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=800&auto=format&fit=crop"
+                alt="PillTalk" loading="lazy">
               <span class="project-badge">AI / ML</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">PillTalk – AI Prescription Translator</h3>
-              <p class="project-description">AI-powered system that converts handwritten medical prescriptions into simplified English instructions with audio support using Google Gemini and TTS APIs. Deployed on Hugging Face Spaces.</p>
-              <div class="project-tags">
-                <span class="project-tag">Python</span><span class="project-tag">OpenCV</span>
-                <span class="project-tag">OCR</span><span class="project-tag">NLP</span>
-                <span class="project-tag">Google Gemini</span><span class="project-tag">React.js</span>
-                <span class="project-tag">TTS</span>
+              <h3 class="project-title">PillTalk – AI Prescription Assistant</h3>
+              <p class="project-description">An AI-powered healthcare application that converts handwritten medical
+                prescriptions into structured, easy-to-understand digital instructions. Preprocesses and interprets
+                dosage schedules and precautions.</p>
+
+              <div class="project-metrics">
+                <span class="metric"><b>95%</b> extraction accuracy</span>
+                <span class="metric"><b>500+</b> prescriptions</span>
+                <span class="metric"><b>100+</b> users</span>
               </div>
+
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">OpenCV</span>
+                <span class="project-tag">OCR</span>
+                <span class="project-tag">NLP</span>
+                <span class="project-tag">Google Gemini API</span>
+                <span class="project-tag">React.js</span>
+                <span class="project-tag">Hugging Face Spaces</span>
+              </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/PillTalk" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/PillTalk" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 2. Student Performance Tracker -->
-          <div class="project-card" data-category="ai-ml">
+          <!-- DataWhisperer -->
+          <div class="project-card reveal" data-category="data">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop" alt="Student Performance Tracker">
-              <span class="project-badge">AI / ML</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Student Performance Tracker</h3>
-              <p class="project-description">A data-driven application to track, analyze, and predict student academic performance. Visualizes trends across subjects, identifies at-risk students, and provides actionable insights through interactive dashboards.</p>
-              <div class="project-tags">
-                <span class="project-tag">Python</span><span class="project-tag">Data Analysis</span>
-                <span class="project-tag">Machine Learning</span><span class="project-tag">Visualization</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/mythribanda/Student-Performance-Tracker" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. Smart Price Insights -->
-          <div class="project-card" data-category="data">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop" alt="Smart Price Insights">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                alt="DataWhisperer" loading="lazy">
               <span class="project-badge">Data Science</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Smart Price Insights</h3>
-              <p class="project-description">An intelligent price analysis tool that processes product pricing data to reveal market trends, price fluctuations, and competitive positioning using statistical analysis and visualization techniques.</p>
+              <h3 class="project-title">DataWhisperer – AI Analytics Platform</h3>
+              <p class="project-description">An AI-powered data analytics platform that helps users upload datasets to
+                automatically clean data, generate insights, produce smart visualizations, and deliver business
+                recommendations using natural language queries.</p>
+
               <div class="project-tags">
-                <span class="project-tag">Python</span><span class="project-tag">Data Analysis</span>
-                <span class="project-tag">Visualization</span><span class="project-tag">Statistics</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">OpenAI / Gemini APIs</span>
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">React</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/smart-price-insights" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/DataWhisperer" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 4. FoodLink Relay -->
-          <div class="project-card" data-category="web">
+          <!-- EduSim -->
+          <div class="project-card reveal" data-category="web">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop" alt="FoodLink Relay">
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+                alt="EduSim" loading="lazy">
               <span class="project-badge">Web Dev</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">FoodLink Relay</h3>
-              <p class="project-description">A food donation and delivery relay platform connecting surplus food sources with those in need. Enables donors, volunteers, and recipients to coordinate food distribution efficiently through a streamlined web interface.</p>
+              <h3 class="project-title">EduSim – AI Educational Simulation</h3>
+              <p class="project-description">During my internship at Alonzo AI, I worked as a Full Stack Developer
+                Intern contributing to EduSim, an AI-powered educational platform. I was involved in developing
+                responsive frontend interfaces, integrating APIs, collaborating on backend functionality, managing
+                database interactions, and participating in testing and deployment activities. The internship provided
+                practical experience in building scalable web applications and working within a professional software
+                development team.</p>
+
               <div class="project-tags">
-                <span class="project-tag">HTML5</span><span class="project-tag">CSS3</span>
-                <span class="project-tag">JavaScript</span><span class="project-tag">Web Platform</span>
+                <span class="project-tag">React.js</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">AI APIs</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/foodlink-relay-18120-73687-12898-27257" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/EduSim" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 5. Smart Student Hub -->
-          <div class="project-card" data-category="web">
+          <!-- SafeWalk -->
+          <div class="project-card reveal" data-category="security">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800&auto=format&fit=crop" alt="Smart Student Hub">
-              <span class="project-badge">Web Dev</span>
+              <img src="public/safewalk.png" alt="SafeWalk" loading="lazy">
+              <span class="project-badge">Security</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Smart Student Hub</h3>
-              <p class="project-description">A centralized student productivity platform with task management, resource sharing, schedule planning, and academic progress tracking — all within a single intuitive web interface designed for student success.</p>
+              <h3 class="project-title">SafeWalk – AI Women Safety Platform</h3>
+              <p class="project-description">A proactive safety platform for women that predicts travel risks and
+                optimizes routes using real-time safety scores, crowd analysis, risk prediction, and live tracking APIs.
+              </p>
+
               <div class="project-tags">
-                <span class="project-tag">HTML5</span><span class="project-tag">CSS3</span>
-                <span class="project-tag">JavaScript</span><span class="project-tag">Productivity</span>
+                <span class="project-tag">AI</span>
+                <span class="project-tag">Geolocation APIs</span>
+                <span class="project-tag">Maps APIs</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">FastAPI</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/smart-student-hub" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/SafeWalk" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 6. CBIT Research Internship -->
-          <div class="project-card" data-category="ai-ml">
+          <!-- CityOS AI -->
+          <div class="project-card reveal" data-category="data">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop" alt="CBIT Research Internship">
-              <span class="project-badge">AI / ML</span>
+              <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=800&auto=format&fit=crop"
+                alt="CityOS AI" loading="lazy">
+              <span class="project-badge">Data Science</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">CBIT Research Internship</h3>
-              <p class="project-description">Repository documenting AI research work completed during the internship at CBIT (June–August 2025). Includes project reports, research notes, model experiments, and full documentation for the PillTalk project.</p>
+              <h3 class="project-title">CityOS AI – Smart City Digital Twin</h3>
+              <p class="project-description">A smart city digital twin platform that monitors urban infrastructure
+                (traffic, air quality, smart waste, and water levels) using AI, real-time sensor data, and visual
+                analytics dashboards.</p>
+
               <div class="project-tags">
-                <span class="project-tag">Research</span><span class="project-tag">AI</span>
-                <span class="project-tag">Documentation</span><span class="project-tag">Python</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">AI APIs</span>
+                <span class="project-tag">Dashboard Systems</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/CBIT-research-internship" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/CityOS-AI" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 7. Hotel Management System -->
-          <div class="project-card" data-category="web">
+          <!-- Spotify Analysis -->
+          <div class="project-card reveal" data-category="data">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Hotel Management System">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=800&auto=format&fit=crop"
+                alt="Spotify Streaming Analytics" loading="lazy">
+              <span class="project-badge">Data Science</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Spotify Streaming Analytics</h3>
+              <p class="project-description">A data science and business intelligence project focused on analyzing
+                Spotify datasets to identify user behavior trends, clean streaming data, and build Power BI dashboards.
+              </p>
+
+              <div class="project-metrics">
+                <span class="metric"><b>600K+</b> records</span>
+                <span class="metric"><b>Interactive</b> dashboards</span>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">NumPy</span>
+                <span class="project-tag">Matplotlib</span>
+                <span class="project-tag">Seaborn</span>
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">R</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/mythribanda/Most-Streamed-Spotify-Songs-" target="_blank"
+                  rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
+                <a href="https://rpubs.com/Mythri_banda/1300332" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="project-card reveal" data-category="web">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop"
+                alt="Hotel Management System" loading="lazy">
               <span class="project-badge">Web Dev</span>
             </div>
             <div class="project-content">
               <h3 class="project-title">Hotel Management System</h3>
-              <p class="project-description">A comprehensive hotel management application for handling room bookings, guest check-in/check-out, billing, and staff management. Built with a MySQL database backend to manage records efficiently.</p>
+              <p class="project-description">A complete hotel management solution for guest registration, room
+                allocation, booking management, staff management, and billing system integration.</p>
+
               <div class="project-tags">
-                <span class="project-tag">Python</span><span class="project-tag">MySQL</span>
-                <span class="project-tag">DBMS</span><span class="project-tag">Management System</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">ER Modeling</span>
+                <span class="project-tag">Relational Databases</span>
+                <span class="project-tag">SQL Queries</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/HOTEL-MANAGEMENT-SYSTEM" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/HOTEL-MANAGEMENT-SYSTEM" target="_blank"
+                  rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 8. CyberGuard -->
-          <div class="project-card" data-category="security">
+          <!-- Project Card -->
+          <div class="project-card reveal" data-category="security">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=800&auto=format&fit=crop" alt="CyberGuard Prototype Design">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop"
+                alt="ClaimWatch" loading="lazy">
               <span class="project-badge">Security</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">CyberGuard – Prototype Design</h3>
-              <p class="project-description">A UI/UX prototype for a cybersecurity awareness and monitoring tool. Features interactive dashboards, threat alert screens, and user-friendly security interfaces to help users understand and manage digital safety.</p>
+              <h3 class="project-title">ClaimWatch – Insurance Claim Analytics</h3>
+              <p class="project-description">An AI-powered insurance claim analytics platform designed to analyze
+                insurance claims, perform risk assessment, and detect suspicious activities.</p>
+
               <div class="project-tags">
-                <span class="project-tag">UI/UX Design</span><span class="project-tag">Prototype</span>
-                <span class="project-tag">Cybersecurity</span><span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">AI Models</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/cyberguard-prototype-design" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/ClaimWatch" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 9. Spotify Data Analysis -->
-          <div class="project-card" data-category="data">
+          <!-- Project Card -->
+          <div class="project-card reveal" data-category="web">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=800&auto=format&fit=crop" alt="Spotify Data Analysis">
-              <span class="project-badge">Data Science</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Most-Streamed Spotify Songs – Data Analysis</h3>
-              <p class="project-description">Exploratory data analysis on Spotify streaming datasets identifying trends in artist popularity and genre distribution. Created histograms, heatmaps, pie charts, and box plots to derive actionable insights on streaming patterns.</p>
-              <div class="project-tags">
-                <span class="project-tag">R</span><span class="project-tag">dplyr</span>
-                <span class="project-tag">ggplot2</span><span class="project-tag">readr</span>
-                <span class="project-tag">CSV</span><span class="project-tag">Data Visualization</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/mythribanda/Most-Streamed-Spotify-Songs-" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
-                <a href="https://rpubs.com/Mythri_banda/1300332" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 10. MindBreaks -->
-          <div class="project-card" data-category="web">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop" alt="MindBreaks">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                alt="Smart Price Comparison" loading="lazy">
               <span class="project-badge">Web Dev</span>
             </div>
             <div class="project-content">
-              <h3 class="project-title">MindBreaks</h3>
-              <p class="project-description">A mental wellness web application offering guided micro-break activities, breathing exercises, mindfulness prompts, and stress-relief techniques to help students and professionals maintain focus and mental balance.</p>
+              <h3 class="project-title">Smart Price Comparison – AI Shopping Assistant</h3>
+              <p class="project-description">An AI-powered shopping assistant that tracks product prices across multiple
+                platforms, performs trend analysis, and provides smart recommendations.</p>
+
               <div class="project-tags">
-                <span class="project-tag">HTML5</span><span class="project-tag">CSS3</span>
-                <span class="project-tag">JavaScript</span><span class="project-tag">Wellness</span>
-                <span class="project-tag">UI/UX</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">AI APIs</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/MindBreaks" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
+                <a href="https://github.com/mythribanda/smart-price-comparison" target="_blank"
+                  rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
               </div>
             </div>
           </div>
 
-          <!-- 11. Mythri Portfolio -->
-          <div class="project-card" data-category="web">
+          <!-- Project Card -->
+          <div class="project-card reveal" data-category="data">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="Personal Portfolio Website">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop"
+                alt="Student Performance Tracker" loading="lazy">
+              <span class="project-badge">Data Science</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Student Performance Tracker</h3>
+              <p class="project-description">An educational analytics dashboard that tracks student profiles, grades,
+                and attendance, utilizing performance prediction algorithms to forecast outcomes.</p>
+
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Jupyter Notebook</span>
+                <span class="project-tag">Data Analytics</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/mythribanda/Student-Performance-Tracker" target="_blank"
+                  rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="project-card reveal" data-category="web">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800&auto=format&fit=crop"
+                alt="Smart Student Hub" loading="lazy">
+              <span class="project-badge">Web Dev</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Smart Student Hub</h3>
+              <p class="project-description">An integrated productivity platform designed for student resource
+                management, study scheduling, academic tracking, and productivity utilities.</p>
+
+              <div class="project-tags">
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">React</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/mythribanda/smart-student-hub" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="project-card reveal" data-category="ai-ml">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop"
+                alt="AI Price Comparison" loading="lazy">
+              <span class="project-badge">AI / ML</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">AI Price Comparison</h3>
+              <p class="project-description">An intelligent market analysis tool using machine learning to compare
+                products, predict prices, and identify the best value options based on market insights.</p>
+
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Machine Learning</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/mythribanda/AI-Price-Comparison" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="project-card reveal" data-category="web">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
+                alt="Personal Portfolio Website" loading="lazy">
               <span class="project-badge">Web Dev</span>
             </div>
             <div class="project-content">
               <h3 class="project-title">Personal Portfolio Website</h3>
-              <p class="project-description">Fully responsive personal portfolio built with HTML and CSS featuring mobile-first design, smooth UI elements, Flexbox, CSS Grid, and media queries for complete cross-device compatibility.</p>
+              <p class="project-description">A professional developer portfolio website showcasing projects, skills,
+                certifications, and achievements, built with responsive layout and modern UI/UX.</p>
+
               <div class="project-tags">
-                <span class="project-tag">HTML5</span><span class="project-tag">CSS3</span>
-                <span class="project-tag">Responsive Design</span><span class="project-tag">Flexbox</span>
-                <span class="project-tag">CSS Grid</span>
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">React.js</span>
               </div>
+
               <div class="project-links">
-                <a href="https://github.com/mythribanda/Mythri-Portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                  GitHub
-                </a>
-                <a href="https://mythribanda.github.io/Mythri-Portfolio/" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                  Live Demo
-                </a>
+                <a href="https://github.com/mythribanda/Mythri-Portfolio" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg>GitHub</a>
+                <a href="https://mythribanda.github.io/Mythri-Portfolio/" target="_blank" rel="noopener noreferrer"
+                  class="project-link"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>Live Demo</a>
               </div>
             </div>
           </div>
 
-        </div><!-- /projects-grid -->
+        </div>
+
+
+        <div class="github-cta reveal">
+          <div class="github-stats">
+            <div class="github-stat">
+              <div class="gh-num">14+</div>
+              <div class="gh-label">Featured projects</div>
+            </div>
+            <div class="github-stat">
+              <div class="gh-num">AI · Data · Web</div>
+              <div class="gh-label">Focus areas</div>
+            </div>
+            <div class="github-stat">
+              <div class="gh-num">Public</div>
+              <div class="gh-label">Open source</div>
+            </div>
+          </div>
+          <a href="https://github.com/mythribanda" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+              </path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+            View all on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Achievements -->
+    <section id="achievements">
+      <div class="container-custom">
+        <h2 class="section-heading reveal">Achievements <div class="section-heading-line"></div>
+        </h2>
+
+        <div class="achievements-grid">
+
+          <div class="achievement-card reveal">
+            <div class="achievement-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z">
+                </path>
+                <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"></path>
+              </svg>
+            </div>
+            <div class="achievement-body">
+              <h4>Shipped a live AI product</h4>
+              <p>Deployed PillTalk on Hugging Face Spaces — a publicly accessible AI healthcare application serving real
+                end users.</p>
+            </div>
+          </div>
+
+          <div class="achievement-card reveal">
+            <div class="achievement-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+            </div>
+            <div class="achievement-body">
+              <h4>Oracle-certified in Data Science &amp; AI</h4>
+              <p>Earned Oracle Certified Data Science Professional and AI Foundations Associate credentials (2024).</p>
+            </div>
+          </div>
+
+          <div class="achievement-card reveal">
+            <div class="achievement-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m7.5 4.27 9 5.15"></path>
+                <path
+                  d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z">
+                </path>
+                <path d="m3.3 7 8.7 5 8.7-5"></path>
+                <path d="M12 22V12"></path>
+              </svg>
+            </div>
+            <div class="achievement-body">
+              <h4>Multiple AI &amp; data products shipped</h4>
+              <p>Built and published a range of AI, data-science and full-stack projects across healthcare, education
+                and analytics.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ══════════════ RESUME ══════════════════════ -->
+    <!-- Resume -->
     <section id="resume">
       <div class="container-custom">
-        <div class="resume-header">
-          <h2 class="section-heading" style="margin-bottom:0">Resume <div class="section-heading-line"></div></h2>
-          <button class="btn-primary" id="download-resume">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="resume-header reveal">
+          <h2 class="section-heading" style="margin-bottom:0">Resume <div class="section-heading-line"></div>
+          </h2>
+          <a class="btn-primary" id="download-resume" href="public/Mythri_Raj_Banda_Resume.pdf"
+            download="Mythri_Raj_Banda_Resume.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" x2="12" y1="15" y2="3"></line>
             </svg>
             Download Resume
-          </button>
+          </a>
         </div>
 
         <div class="resume-grid">
 
-          <!-- Education -->
-          <div>
+          <div class="reveal">
             <div class="resume-section-header">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="color:var(--accent)">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
+              <!-- Education -->
               <h3>Education</h3>
             </div>
 
             <div class="education-card">
               <div class="education-header">
                 <h4 class="education-degree">B.E – Artificial Intelligence &amp; Data Science</h4>
-                <span class="education-period">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-                  2023 – 2027
-                </span>
+                <span class="education-period"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                    <line x1="16" x2="16" y1="2" y2="6"></line>
+                    <line x1="8" x2="8" y1="2" y2="6"></line>
+                    <line x1="3" x2="21" y1="10" y2="10"></line>
+                  </svg>2023 – 2027</span>
               </div>
               <p class="education-school">Stanley College of Engineering and Technology for Women</p>
               <span class="education-gpa">CGPA: 7.5</span>
+              <span class="education-clean">No Active Backlogs</span>
             </div>
 
             <div class="education-card">
               <div class="education-header">
                 <h4 class="education-degree">Intermediate – MPC</h4>
-                <span class="education-period">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-                  2021 – 2023
-                </span>
+                <span class="education-period"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                    <line x1="16" x2="16" y1="2" y2="6"></line>
+                    <line x1="8" x2="8" y1="2" y2="6"></line>
+                    <line x1="3" x2="21" y1="10" y2="10"></line>
+                  </svg>2021 – 2023</span>
               </div>
               <p class="education-school">Narayana Junior College</p>
               <span class="education-gpa">Percentage: 73%</span>
@@ -606,35 +1122,77 @@
             <div class="education-card">
               <div class="education-header">
                 <h4 class="education-degree">SSC</h4>
-                <span class="education-period">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-                  2009 – 2021
-                </span>
+                <span class="education-period"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                    <line x1="16" x2="16" y1="2" y2="6"></line>
+                    <line x1="8" x2="8" y1="2" y2="6"></line>
+                    <line x1="3" x2="21" y1="10" y2="10"></line>
+                  </svg>2009 – 2021</span>
               </div>
               <p class="education-school">St Ann's Grammar School</p>
               <span class="education-gpa">Percentage: 95%</span>
             </div>
           </div>
 
-          <!-- Certifications, Coursework, Languages -->
-          <div>
+          <div class="reveal">
             <div class="resume-section-header">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="color:var(--accent)">
                 <circle cx="12" cy="8" r="6"></circle>
                 <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
               </svg>
+              <!-- Certifications -->
               <h3>Certifications</h3>
             </div>
             <div class="certifications-card">
+              <p class="cert-group-title">Professional</p>
               <ul class="certifications-list">
-                <li><div class="cert-bullet"></div><span>Oracle – Oracle Certified Data Science Professional</span></li>
-                <li><div class="cert-bullet"></div><span>Oracle – Oracle Certified AI Foundations Associate</span></li>
-                <li><div class="cert-bullet"></div><span>IBM &amp; CISCO – Artificial Intelligence Fundamentals</span></li>
+                <li>
+                  <div class="cert-bullet"></div><span>Oracle – Certified Data Science Professional (Oracle University,
+                    2024)</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>Oracle – Certified AI Foundations Associate (Oracle University,
+                    2024)</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>IBM &amp; Cisco – Artificial Intelligence Fundamentals
+                    (2024)</span>
+                </li>
+              </ul>
+              <p class="cert-group-title">Generative AI &amp; Data</p>
+              <ul class="certifications-list">
+                <li>
+                  <div class="cert-bullet"></div><span>IBM – Introduction to Generative AI</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>Microsoft &amp; LinkedIn – Career Essentials in Generative
+                    AI</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>Microsoft &amp; LinkedIn – Career Essentials in Data
+                    Analysis</span>
+                </li>
+              </ul>
+              <p class="cert-group-title">Software &amp; Foundations</p>
+              <ul class="certifications-list">
+                <li>
+                  <div class="cert-bullet"></div><span>HackerRank – Software Developer (Intern)</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>Infosys Springboard – Python, Data Science, Power BI, DBMS &amp;
+                    more</span>
+                </li>
               </ul>
             </div>
 
             <div class="resume-section-header" style="margin-top:1.5rem">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="color:var(--accent)">
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
               </svg>
@@ -642,18 +1200,31 @@
             </div>
             <div class="certifications-card">
               <ul class="certifications-list">
-                <li><div class="cert-bullet"></div><span>Data Structures and Algorithms</span></li>
-                <li><div class="cert-bullet"></div><span>Operating Systems</span></li>
-                <li><div class="cert-bullet"></div><span>Object-Oriented Programming</span></li>
-                <li><div class="cert-bullet"></div><span>Database Management System</span></li>
+                <li>
+                  <div class="cert-bullet"></div><span>Data Structures &amp; Algorithms · Software Engineering</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>Machine Learning · Deep Learning · NLP · Computer Vision</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>OOP · Operating Systems · Computer Networks</span>
+                </li>
+                <li>
+                  <div class="cert-bullet"></div><span>Database Management Systems · Statistics</span>
+                </li>
               </ul>
             </div>
 
             <div class="resume-section-header" style="margin-top:1.5rem">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)">
-                <path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path>
-                <path d="M2 5h12"></path><path d="M7 2h1"></path>
-                <path d="m22 22-5-5"></path><circle cx="17" cy="17" r="5"></circle>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="color:var(--accent)">
+                <path d="m5 8 6 6"></path>
+                <path d="m4 14 6-6 2-3"></path>
+                <path d="M2 5h12"></path>
+                <path d="M7 2h1"></path>
+                <path d="m22 22-5-5"></path>
+                <circle cx="17" cy="17" r="5"></circle>
               </svg>
               <h3>Languages</h3>
             </div>
@@ -682,52 +1253,60 @@
             </div>
           </div>
 
-        </div><!-- /resume-grid -->
+        </div>
       </div>
     </section>
 
-    <!-- ══════════════ CONTACT ════════════════════ -->
+    <!-- Contact -->
     <section id="contact">
       <div class="container-custom">
-        <h2 class="section-heading">Contact Me <div class="section-heading-line"></div></h2>
+        <h2 class="section-heading reveal">Contact Me <div class="section-heading-line"></div>
+        </h2>
 
         <div class="contact-grid">
 
-          <!-- Contact Info -->
-          <div class="contact-info">
+          <div class="contact-info reveal">
             <div>
               <h3 style="font-size:1.35rem;font-weight:700">Get In Touch</h3>
-              <p style="color:var(--fg-muted);margin-top:0.75rem;font-size:0.9rem;line-height:1.8;text-align:justify;text-justify:inter-word;">
-                Feel free to reach out for questions, project inquiries, or just to say hello. I'll get back
-                to you as soon as possible!
+              <p style="color:var(--fg-muted);margin-top:0.75rem;font-size:0.9rem;line-height:1.8;text-align:left">
+                Open to internships and entry roles in AI/ML, software and data. Reach out about projects,
+                collaboration, or just to say hello.
               </p>
             </div>
 
             <div class="contact-items">
               <div class="contact-item">
-                <div class="contact-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                </div>
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg></div>
                 <div class="contact-details">
-                  <p>Email</p>
-                  <a href="/cdn-cgi/l/email-protection#402d393428322922212e2421372f322b333021232500272d21292c6e232f2d"><span class="__cf_email__" data-cfemail="a3cedad7cbd1cac1c2cdc7c2d4ccd1c8d0d3c2c0c6e3c4cec2cacf8dc0ccce">[email&#160;protected]</span></a>
+                  <p>Email</p><a href="mailto:bandamythri@gmail.com">bandamythri@gmail.com</a>
                 </div>
               </div>
 
               <div class="contact-item">
-                <div class="contact-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg></div>
                 <div class="contact-details">
-                  <p>Phone</p>
-                  <a href="tel:+918897643678">+91 8897643678</a>
+                  <p>Phone</p><a href="tel:+918897643678">+91 8897643678</a>
                 </div>
               </div>
 
               <div class="contact-item">
-                <div class="contact-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg></div>
                 <div class="contact-details">
                   <p>Location</p>
                   <p style="font-weight:500">Hyderabad, Telangana, India</p>
@@ -736,51 +1315,54 @@
             </div>
 
             <div>
-              <p style="color:var(--fg-subtle);margin-bottom:0.75rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em">
-                Find me on
-              </p>
+              <p
+                style="color:var(--fg-subtle);margin-bottom:0.75rem;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em">
+                Find me on</p>
               <div class="social-icons">
-                <a href="https://www.linkedin.com/in/mythri-banda" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="https://github.com/mythribanda" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                </a>
-                <a href="https://leetcode.com/mythri_banda" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
-                  <span style="font-weight:700;font-size:.7rem">LC</span>
-                </a>
-                <a href="https://www.hackerrank.com/mythri_banda" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
-                  <span style="font-weight:700;font-size:.7rem">HR</span>
-                </a>
+                <a href="https://www.linkedin.com/in/mythri-banda" class="social-icon" target="_blank"
+                  rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                    height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg></a>
+                <a href="https://github.com/mythribanda" class="social-icon" target="_blank" rel="noopener noreferrer"
+                  aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                    </path>
+                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                  </svg></a>
+                <a href="https://leetcode.com/mythri_banda" class="social-icon" target="_blank"
+                  rel="noopener noreferrer" aria-label="LeetCode"><span
+                    style="font-weight:700;font-size:.7rem">LC</span></a>
+                <a href="https://www.hackerrank.com/mythri_banda" class="social-icon" target="_blank"
+                  rel="noopener noreferrer" aria-label="HackerRank"><span
+                    style="font-weight:700;font-size:.7rem">HR</span></a>
               </div>
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div class="contact-form">
+          <div class="contact-form reveal">
             <h3>Send Message</h3>
-            <div id="form-success" class="form-success" style="display:none">
-              Thank you! Your message has been sent successfully.
-            </div>
+            <div id="form-success" class="form-success" style="display:none">Thanks — your message is ready. Your mail
+              app should open to send it.</div>
             <form id="contact-form">
-              <div class="form-group">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" name="name" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" id="email" name="email" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" id="subject" name="subject" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label for="message" class="form-label">Message</label>
-                <textarea id="message" name="message" rows="4" class="form-textarea" required></textarea>
-              </div>
+              <div class="form-group"><label for="name" class="form-label">Your Name</label><input type="text" id="name"
+                  name="name" class="form-input" required></div>
+              <div class="form-group"><label for="email" class="form-label">Your Email</label><input type="email"
+                  id="email" name="email" class="form-input" required></div>
+              <div class="form-group"><label for="subject" class="form-label">Subject</label><input type="text"
+                  id="subject" name="subject" class="form-input" required></div>
+              <div class="form-group"><label for="message" class="form-label">Message</label><textarea id="message"
+                  name="message" rows="4" class="form-textarea" required></textarea></div>
+              <input type="checkbox" id="botcheck" name="botcheck" style="display:none" tabindex="-1"
+                autocomplete="off">
               <button type="submit" class="btn-primary" style="width:100%;justify-content:center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m22 2-7 20-4-9-9-4Z"></path>
                   <path d="M22 2 11 13"></path>
                 </svg>
@@ -789,43 +1371,48 @@
             </form>
           </div>
 
-        </div><!-- /contact-grid -->
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ══════════════ FOOTER ════════════════════ -->
+  <!-- Footer -->
   <footer>
     <div class="container-custom">
       <div class="footer-content">
         <div>
           <h2 class="footer-logo">Mythri<span>.dev</span></h2>
-          <p class="footer-tagline">AI &amp; Data Science Student</p>
+          <p class="footer-tagline">AI &amp; Data Science Engineer</p>
         </div>
 
         <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a>
+          <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+          <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a>
+          <a href="#resume">Resume</a><a href="#contact">Contact</a>
         </div>
 
         <div class="footer-social">
-          <a href="https://www.linkedin.com/in/mythri-banda"  target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/mythribanda"            target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://leetcode.com/mythri_banda"         target="_blank" rel="noopener noreferrer">LeetCode</a>
+          <a href="https://www.linkedin.com/in/mythri-banda" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/mythribanda" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://leetcode.com/mythri_banda" target="_blank" rel="noopener noreferrer">LeetCode</a>
         </div>
 
         <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m18 15-6-6-6 6"></path>
           </svg>
         </button>
       </div>
 
       <div class="footer-copyright">
-        <p>&copy; <span i
+        <p>&copy; <span id="current-year"></span> Mythri Raj Banda. Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
