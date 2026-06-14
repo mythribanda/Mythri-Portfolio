@@ -422,11 +422,11 @@ header.scrolled {
 .project-link:hover { color: var(--accent); }
 
 /* achievements */
-#achievements { background-color: var(--bg); }
+#achievements { background-color: var(--bg-alt); }
 .achievements-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
 .achievement-card {
   display: flex; gap: 1rem; align-items: flex-start;
-  background: var(--card-bg); border: 1px solid var(--border);
+  background: var(--card-bg); border: 1px solid var(--border); border-left: 3px solid var(--accent);
   border-radius: var(--radius-lg); padding: 1.5rem 1.6rem;
   box-shadow: var(--card-shadow); transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
@@ -615,39 +615,77 @@ footer { background: linear-gradient(160deg, #0c0e1c 0%, #141728 100%); color: w
 .tech-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .tech-tag { font-size: 0.72rem; font-weight: 600; background: var(--accent-light); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 9999px; }
 
-/* Achievements */
-#achievements { background-color: var(--bg-alt); }
-.achievements-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-.achievement-card {
-  display: flex; gap: 1rem; align-items: flex-start;
-  background: var(--card-bg); border: 1px solid var(--border); border-left: 3px solid var(--accent);
-  border-radius: var(--radius-md); padding: 1.2rem 1.4rem; transition: all 0.25s;
-}
-.achievement-card:hover { box-shadow: var(--card-shadow-hover); transform: translateX(4px); }
-.achievement-icon {
-  width: 2.4rem; height: 2.4rem; flex-shrink: 0; border-radius: var(--radius-sm);
-  background: var(--accent-light); color: var(--accent);
-  display: flex; align-items: center; justify-content: center;
-}
-.achievement-body h4, .achievement-text h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.2rem; }
-.achievement-body p, .achievement-text p { font-size: 0.82rem; color: var(--fg-muted); line-height: 1.6; text-align: left; }
-
 /* Certifications groups */
 .cert-group-title { font-size: 0.72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.07em; margin: 0.25rem 0 0.6rem; }
 .cert-group-title:not(:first-child) { margin-top: 1rem; }
 
 /* GitHub strip */
 .github-cta {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem;
-  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
-  padding: 1.5rem 1.75rem; margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin-top: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
-.github-stats { display: flex; flex-wrap: wrap; gap: 1.75rem; }
-.github-stat { text-align: center; }
-.github-stat .gh-num { font-family: 'Sora', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--accent); line-height: 1; }
-.github-stat .gh-label { font-size: 0.72rem; color: var(--fg-subtle); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+.github-cta:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+.github-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+.github-stat {
+  text-align: center;
+  flex: 1 1 120px;
+}
+.github-stat .gh-num {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+.github-stat .gh-label {
+  font-size: 0.72rem;
+  color: var(--fg-subtle);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
 
 @media (min-width: 768px) {
   .tech-stack { grid-template-columns: repeat(3, 1fr); }
   .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+  .github-cta {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 1.25rem;
+  }
+  .github-stats {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: auto;
+  }
+  .github-stat {
+    text-align: left;
+    flex: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .achievements-grid { grid-template-columns: repeat(3, 1fr); }
 }
